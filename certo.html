@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certo</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        font-size: 25px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: aliceblue;
+    }
+
+    .navbar img {
+        height: 60px;
+        margin-left: 10%;
+        display: flex;
+    }
+
+    .nav-items {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .nav-items p {
+        margin: 20px;
+    }
+
+    .navbar button {
+        width: 60px;
+        height: 40px;
+        color: white;
+        border-radius: 20px;
+        margin-right: 10%;
+        background-color: rgba(67, 53, 222, 1);
+    }
+
+    .company {
+        display: flex;
+        align-items: center;
+    }
+
+    .company .arrow {
+        width: 12px;
+        height: 12px;
+        margin-left: 5px;
+        margin-right: 30px;
+    }
+
+    .mission {
+        width: 100%;
+        height: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mission-text {
+        width: 50%;
+    }
+
+    .mission-text .header {
+        width: 550px;
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 60px;
+    }
+
+    .mission-text .sub-header {
+        width: 550px;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 70px;
+
+    }
+
+    .buttons {
+        height: 40px;
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .button1 {
+        width: 230px;
+        border-radius: 20px;
+        font-weight: 700;
+        border: none;
+        background-color: rgba(255, 194, 71, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .button2 {
+        width: 230px;
+        border-radius: 20px;
+        font-weight: 700;
+
+    }
+
+    .mission-img {
+        display: flex;
+        align-items: center;
+    }
+
+    .mission-img img {
+        height: 600px;
+        width: 400px;
+    }
+
+    .mission-text .buttons .arrow {
+        height: 20px;
+        width: 20px;
+        padding-left: 10px;
+    }
+
+    .android {
+        width: 100%;
+        height: 750px;
+        background-color: rgba(255, 194, 71, 1);
+    }
+
+    .android .header {
+        font-size: 50px;
+        font-weight: 700;
+        width: 700px;
+        padding: 80px 100px;
+    }
+
+    .cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .cards .card-items1 {
+        height: 200px;
+        width: 300px;
+        padding: 30px;
+        background-color: azure;
+        border-radius: 60px;
+    }
+
+    .cards .card-items2 {
+        height: 200px;
+        width: 300px;
+        background-color: azure;
+        padding: 30px;
+        border-radius: 60px;
+    }
+
+    .cards .card-items3 {
+        height: 200px;
+        width: 300px;
+        background-color: azure;
+        padding: 30px;
+        border-radius: 60px;
+    }
+
+    .cards h4 {
+        padding-top: 20px;
+    }
+
+    .features .header {
+        height: 100px;
+        width: 650px;
+        display: flex;
+        align-items: center;
+    }
+
+    .features .feature {
+        margin: 50px 200px;
+    }
+
+
+    .mission .mission-text .header h4 {
+        font-size: 45px;
+    }
+
+    .buttons1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .buttons1 .button1 {
+        padding: 10px;
+    }
+
+    .buttons1 .button2 {
+        padding: 10px;
+    }
+
+    .spyware {
+        width: 100%;
+        height: 800px;
+        background-color: rgb(217, 235, 246);
+    }
+
+    .spyware .header1 {
+        font-size: 30px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .spyware .header2 {
+        font-size: 30px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu {
+        height: 610px;
+        width: 900px;
+        background-color: rgb(245, 248, 248);
+        margin: 30px 300px;
+        border-radius: 40px;
+    }
+
+    .spyware .menu .buttons {
+        gap: 20px;
+        padding-left: 180px;
+    }
+
+    .menu .row1 {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+
+    .menu .box1 {
+        width: 200px;
+        margin-left: 70px;
+    }
+
+    .menu .box2 {
+        width: 200px;
+    }
+
+    .menu .box3 {
+        width: 200px;
+        margin-right: 70px;
+
+    }
+
+    .menu .row2 {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .help {
+        display: flex;
+        height: 300px;
+        width: 100%;
+        background-color: white;
+
+    }
+
+    .help .dead {
+        height: 200px;
+        width: 400px;
+        background-color: rgba(255, 194, 71, 1);
+        margin-left: 350px;
+        margin-top: 50px;
+        border-radius: 30px;
+    }
+
+    .help .center {
+        height: 200px;
+        width: 400px;
+        margin-top: 50px;
+        margin-left: 100px;
+
+    }
+
+    .help h3 {
+        display: flex;
+        padding: 30px 30px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .help p {
+        display: flex;
+        padding: 0px 20px;
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .help .blue {
+        background-color: blue;
+        height: 40px;
+        width: 90px;
+        color: white;
+        border-radius: 20px;
+        border: none;
+        margin: 20px;
+    }
+
+    .help .white {
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        margin: 20px;
+        background-color: white;
+    }
+
+    .spying {
+        width: 100%;
+
+        height: 300px;
+        background-color: rgb(17, 17, 223);
+    }
+
+    .spying .box {
+        height: 300px;
+        background-color: rgb(17, 17, 223);
+    }
+
+    .spying .header {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 700;
+        padding-top: 50px;
+        color: white;
+    }
+
+    .spying .para {
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        padding-top: 50px;
+        color: white;
+
+    }
+
+    .spying .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 500px;
+    }
+
+    .latest {
+        height: 750px;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+
+    .latest .box {
+        height: 750px;
+        width: 1100px;
+        background-color: whitesmoke;
+        margin: 0 220px;
+    }
+
+    .latest .header {
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        font-weight: 700;
+        padding-top: 35px;
+    }
+
+    .latest .box .yellow {
+        height: 40px;
+        width: 150px;
+        background-color: rgba(255, 194, 71, 1);
+        border-radius: 30px;
+        margin: 50px 450px;
+    }
+
+    .latest .cards .card-item1 {
+        background-color: white;
+        height: 500px;
+        width: 300px;
+        margin-top: 30px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .latest .cards .card-item2 {
+        background-color: white;
+        height: 500px;
+        width: 300px;
+        margin-top: 30px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .latest .cards .card-item3 {
+        background-color: white;
+        height: 500px;
+        width: 300px;
+        border-radius: 30px;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+
+    .latest .box .cards img {
+        object-fit: cover;
+        width: 100%;
+    }
+    .latest .cards h3{
+        display: flex;
+        justify-content: center;
+        padding: 30px 30px;
+    }
+    .latest .cards p{
+         display: flex;
+        justify-content: center;
+        padding: 10px 30px;
+    }
+</style>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <img src="assets/logo.svg" alt="logo">
+        <div class="nav-items">
+            <p>iphone</p>
+            <p>android</p>
+            <p>help</p>
+            <p class="company">company
+                <img src="assets/arrow.svg" alt="arrow" class="arrow">
+            </p>
+        </div>
+        <button>sign in</button>
+
+    </div>
+    <!-- mission -->
+    <div class="mission">
+        <div class="mission-text">
+            <div class="header">Your mobile privacy is our mission</div>
+            <div class="sub-header">Think your phone has been hacked? Our trusted apps make it easy for you to scan,
+                detect
+                and remove threats from your iPhone and Android devices.</div>
+            <div class="buttons">
+                <button class="button1">Get Certo for iPhone
+                    <img src="assets/rightarrow.svg" alt="arrow" class="arrow">
+                </button>
+                <button class="button2">Get Certo for Android</button>
+            </div>
+        </div>
+        <div class="mission-img">
+            <img src="assets/scan.svg" alt="mobile">
+        </div>
+    </div>
+    <!-- android users -->
+    <div class="android">
+        <div class="header">Loved by thousands of iPhone and Android users alike</div>
+        <div class="cards">
+            <div class="card-items1">
+                <img src="assets/stars.svg" alt="">
+                <p>Does exactly what it says. Clear to read and understand. This is now the second iPhone we’ve used it
+                    on and would certainly recommend this app.</p>
+                <h4>colinandmandy94</h4>
+            </div>
+            <div class="card-items2">
+                <img src="assets/stars.svg" alt="">
+                <p>Love the ease and efficiency. Awesome app. Very informative and insightful if wanting to know more
+                    about your device. The added breach check.is a great bonus. Check any email of they’ve ever been
+                    named in a data breach from years ago. Sweet tool. Love it highly recommend.</p>
+                <h4>Jennifer Black</h4>
+            </div>
+            <div class="card-items3">
+                <img src="assets/stars.svg" alt="">
+                <p>This app is good if you need to identify certain vulnerabilities on your iPhone. If you have any
+                    issues, their customer service was quite helpful and responsive.</p>
+                <h4>Phillip Colligan</h4>
+            </div>
+        </div>
+        <div class="features">
+            <!-- <h3>Featuredin:</h3> -->
+            <img src="assets/features.svg" alt="" class="feature">
+        </div>
+    </div>
+    <!-- mobile security -->
+    <div class="mission">
+        <div class="mission-text">
+            <div class="header">
+                <h4>At Certo, mobile security is not an afterthought, it’s what we do.</h4>
+            </div>
+            <div class="sub-header">With years of experience in mobile security and spyware detection, our products have
+                helped countless people safeguard their devices and find peace of mind.</div>
+            <div class="buttons1">
+                <button class="button1">Get Certo for iPhone
+                    <img src="assets/rightarrow.svg" alt="arrow" class="arrow">
+                </button>
+                <button class="button2">Get Certo for Android</button>
+            </div>
+        </div>
+        <div class="mission-img">
+            <img src="assets/girl.svg" alt="mobile">
+        </div>
+    </div>
+    <!-- spyware -->
+    <div class="spyware">
+        <div class="header1">Get your freedom back, stop mobile </div>
+        <div class="header2">spyware today</div>
+        <div class="menu">
+            <div class="row1">
+                <div class="box1">
+                    <img src="assets/img1.svg" alt="icon">
+                    <h3>Spyware detection</h3>
+                    <p>Our advanced spyware detection engine can identify if a device contains spyware or bugging
+                        software.</p>
+                </div>
+                <div class="box2">
+                    <img src="assets/img2.svg" alt="">
+                    <h3>Keylogger detection</h3>
+                    <p>Find malicious keyboards installed on your device that could allow someone to record things you
+                        type (e.g. passwords).</p>
+                </div>
+                <div class="box3">
+                    <img src="assets/img3.svg" alt="">
+                    <h3>Find tracking apps</h3>
+                    <p>Check which apps can access your location, microphone or camera. Get alerted if a known tracking
+                        app is installed.</p>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="box1">
+                    <img src="assets/img4.svg" alt="">
+                    <h3>OS integrity check</h3>
+                    <p>Analyze your operating system for signs of tampering that could compromise security, such as
+                        Jailbreaking.</p>
+                </div>
+                <div class="box2">
+                    <img src="assets/div (6).svg" alt="">
+                    <h3>Threat removal</h3>
+                    <p>Our intelligent scan will either safely remove threats for you or provide easy-to-follow
+                        instructions.</p>
+                </div>
+                <div class="box3">
+                    <img src="assets/div (7).svg" alt="">
+                    <h3>Easy to use</h3>
+                    <p>We create easy to use apps that can check your device for vulnerabilities in a matter of minutes.
+                    </p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="button1">Get Certo for iPhone
+                    <img src="assets/rightarrow.svg" alt="arrow" class="arrow">
+                </button>
+                <button class="button2">Get Certo for Android</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- help center -->
+    <div class="help">
+        <div class="dead">
+            <h3>Read our story</h3>
+            <p>Find out why thousands trust Certo to secure their mobile world.</p>
+            <button class="blue">About us</button>
+        </div>
+        <div class="center">
+            <h3>Help Center</h3>
+            <p>Help topics, getting started guides and FAQs.</p>
+            <button class="white">Visit help center</button>
+        </div>
+    </div>
+    <!-- spying -->
+    <div class="spying">
+        <div class="box">
+            <div class="header">Is someone spying on your phone?</div>
+            <div class="para">Find out with Certo</div>
+            <div class="buttons">
+                <button class="button1">Get Certo for iPhone
+                    <img src="assets/rightarrow.svg" alt="arrow" class="arrow">
+                </button>
+                <button class="button2">Get Certo for Android</button>
+            </div>
+        </div>
+    </div>
+    <!-- latest insights -->
+    <div class="latest">
+        <div class="box">
+            <div class="header">Latest insights</div>
+            <div class="cards">
+                <div class="card-item1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDuTRHL-gtbOyQTS7tfabeLAfG1lisZLp7g&s"
+                        alt="image">
+                    <h3>Signs Your Ex Is Spying On You</h3>
+                    <p>In an ideal world, after a relationship ends both you and your ex will move on. But what if they
+                        cant let go, and start spying on your...</p>
+                </div>
+                <div class="card-item2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTscG6SxXwWEdqk0Qn_Ekmshg37n8LyRRxBYw&s"
+                        alt="image">
+                    <h3>How to Remove a Hacker from Your Samsung Phone</h3>
+                    <p>Samsung is the second most popular manufacturer of smartphones in the world, with a market share
+                        of 28.19% compared to Apples 28.43% as...</p>
+                </div>
+                <div class="card-item3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMeZdfEESou8fRcEiBoWs0lEWcLM5Vr7EmfQ&s"
+                        alt="image">
+                    <h3>Is Your Cell Phone Under Surveillance?</h3>
+                    <p>In todays surveillance state, it can feel like your every move is being watched. Although your
+                        mind may be conjuring up images of CCTV...</p>
+                </div>
+
+            </div>
+
+            <button class="yellow">View all insights
+                <img src="assets/rightarrow.svg" alt="arrow" class="arrow">
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
